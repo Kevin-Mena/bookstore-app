@@ -1,4 +1,6 @@
 import { v4 as uuid } from "uuid";
+import PropTypes from "prop-types";
+
 const AddBook = ({ setList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -10,6 +12,12 @@ const AddBook = ({ setList }) => {
       id,
       name,
       author,
+    };
+    AddBook.propTypes = {
+      newList: PropTypes.exact({
+        name: PropTypes.string,
+        author: PropTypes.string,
+      }).isRequired,
     };
     if (!name || !author) {
       return;

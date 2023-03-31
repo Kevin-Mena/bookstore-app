@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "./home.css";
 import AddBook from "../AddBook/addbook";
+import PropTypes from "prop-types";
 
 const Home = () => {
   const [lists, setList] = useState([]);
+  Home.propTypes = {
+    lists: PropTypes.arrayOf(PropTypes.number, PropTypes.string).isRequired,
+  };
 
   return (
     <>
