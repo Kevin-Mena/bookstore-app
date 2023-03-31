@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+}
+.navlink {
+    margin-left: 1rem;
+    text-decoration: none;
+}
+.nav {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.account {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+h1 {
+   
+   
+    width: 180px;
+}
