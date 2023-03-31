@@ -1,19 +1,15 @@
-import { useState } from "react";
-import "./home.css";
-import AddBook from "../AddBook/addbook";
-import PropTypes from "prop-types";
+import { useState } from 'react';
+import './home.css';
+import AddBook from '../AddBook/addbook';
 
 const Home = () => {
-  const [lists, setList] = useState([]);
-  Home.propTypes = {
-    lists: PropTypes.arrayOf(PropTypes.number, PropTypes.string).isRequired,
-  };
+  const [lists, setLists] = useState([]);
 
   return (
     <>
       <div>
         <p>ADD NEW BOOK</p>
-        <AddBook setList={setList} />
+        <AddBook setList={setLists} />
       </div>
       <div>
         <ul>
@@ -21,9 +17,15 @@ const Home = () => {
             <ul key={id}>
               <li>{name}</li>
               <li>{author}</li>
-              <button className="comm">Comments</button>
-              <button className="rem">Remove</button>
-              <button className="edit">Edit</button>
+              <button type="button" className="comm">
+                Comments
+              </button>
+              <button type="button" className="rem">
+                Remove
+              </button>
+              <button type="button" className="edit">
+                Edit
+              </button>
             </ul>
           ))}
         </ul>
