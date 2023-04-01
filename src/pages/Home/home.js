@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import './home.css';
-import AddBook from '../AddBook/addbook';
+import { useState } from "react";
+import "./home.css";
+import AddBook from "../../components/AddBook/addbook";
+import BookList from "../../components/BookList/booklist";
 
 const Home = () => {
   const [lists, setLists] = useState([]);
@@ -10,25 +11,7 @@ const Home = () => {
       <div>
         <p>ADD NEW BOOK</p>
         <AddBook setList={setLists} />
-      </div>
-      <div>
-        <ul>
-          {lists.map(({ id, name, author }) => (
-            <ul key={id}>
-              <li>{name}</li>
-              <li>{author}</li>
-              <button type="button" className="comm">
-                Comments
-              </button>
-              <button type="button" className="rem">
-                Remove
-              </button>
-              <button type="button" className="edit">
-                Edit
-              </button>
-            </ul>
-          ))}
-        </ul>
+        <BookList lists={lists} />
       </div>
     </>
   );

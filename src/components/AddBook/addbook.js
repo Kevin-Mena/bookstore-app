@@ -1,20 +1,20 @@
-import { v4 as uuid } from 'uuid';
-import PropTypes from 'prop-types';
+import { v4 as uuid } from "uuid";
+import PropTypes from "prop-types";
 
 const AddBook = ({ setList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const uniqueID = uuid();
     const id = uniqueID.slice(0, 4);
-    const name = e.target.title.value;
+    const title = e.target.title.value;
     const author = e.target.author.value;
     const newList = {
       id,
-      name,
+      title,
       author,
     };
 
-    if (!name || !author) {
+    if (!title || !author) {
       return;
     }
     setList((oldList) => oldList.concat(newList));
@@ -24,7 +24,10 @@ const AddBook = ({ setList }) => {
   AddBook.propTypes = {
     setList: PropTypes.func.isRequired,
   };
-
+  AddBook.propTypes = {
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="title" placeholder="Book title" />
