@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Books = (props) => {
   const { book } = props;
@@ -16,17 +16,19 @@ const Books = (props) => {
   return (
     <div>
       <ul>
-        <ul key={book.id}>
-          <li>{book.title}</li>
-          <li>{book.author}</li>
-          <button
-            type="button"
-            className="remove"
-            onClick={() => handleRemove(book.id)}
-          >
-            Remove
-          </button>
-        </ul>
+        {books.map((book) => (
+          <ul key={book.id}>
+            <li>{book.title}</li>
+            <li>{book.author}</li>
+            <button
+              type="button"
+              className="rem"
+              onClick={() => handleRemove(book.id)}
+            >
+              Remove
+            </button>
+          </ul>
+        ))}
       </ul>
     </div>
   );

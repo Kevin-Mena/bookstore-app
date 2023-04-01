@@ -1,5 +1,5 @@
-import { v4 as uuid } from "uuid";
-import PropTypes from "prop-types";
+import { v4 as uuid } from 'uuid';
+import PropTypes from 'prop-types';
 
 const AddBook = ({ setList }) => {
   const handleSubmit = (e) => {
@@ -24,10 +24,7 @@ const AddBook = ({ setList }) => {
   AddBook.propTypes = {
     setList: PropTypes.func.isRequired,
   };
-  AddBook.propTypes = {
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="title" placeholder="Book title" />
