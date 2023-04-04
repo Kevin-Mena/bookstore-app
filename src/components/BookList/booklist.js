@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Books from '../Books/Books';
+import React from "react";
+import PropTypes from "prop-types";
+import Books from "../Books/Books";
 
 const BookList = (props) => {
   const { lists } = props;
