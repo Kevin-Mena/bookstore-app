@@ -1,20 +1,15 @@
-import { useState } from 'react';
 import './home.css';
 import AddBook from '../../components/AddBook/addbook';
 import BookList from '../../components/BookList/booklist';
 
-const Home = () => {
-  const [lists, setLists] = useState([]);
-
-  return (
-    <>
-      <div>
-        <p>ADD NEW BOOK</p>
-        <AddBook setList={setLists} />
-        <BookList lists={lists} />
-      </div>
-    </>
-  );
-};
+const Home = () => (
+  <>
+    <div>
+      <p>ADD NEW BOOK</p>
+      <AddBook />
+      <BookList />
+    </div>
+  </>
+);
 
 export default Home;

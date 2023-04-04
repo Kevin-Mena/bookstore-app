@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../features/books/booksSlice';
 
-const Books = (props) => {
-  const { book } = props;
+const Books = ({ id, title, author }) => {
+  const dispatch = useDispatch();
   Books.propTypes = {
-    book: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  };
-  const [books, setBooks] = useState([book]);
-
-  const handleRemove = (id) => {
-    const updatedBooks = books.filter((book) => book.id !== id);
-    setBooks(updatedBooks);
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
   };
 
   return (
     <div>
       <ul>
-        {books.map((book) => (
-          <ul key={book.id}>
-            <li>{book.title}</li>
-            <li>{book.author}</li>
-            <button
-              type="button"
-              className="rem"
-              onClick={() => handleRemove(book.id)}
-            >
-              Remove
-            </button>
-          </ul>
-        ))}
+        <li>
+          Title:
+          {title}
+        </li>
+
+        <li>
+          Author:
+          {author}
+        </li>
+
+        <button
+          type="button"
+          className="remove"
+          onClick={() => dispatch(removeBook(id))}
+        >
+          Remove
+        </button>
       </ul>
     </div>
   );
