@@ -1,13 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { v4 as uuid } from 'uuid';
-import bookItems from '../../bookItems';
+import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuid } from "uuid";
 
 const initialState = {
-  bookItems,
+  bookItems: [],
+  isLoading: null,
+  error: null,
 };
 
 const booksSlice = createSlice({
-  name: 'book',
+  name: "book",
   initialState,
   reducers: {
     handleSubmit: (state, action) => {
