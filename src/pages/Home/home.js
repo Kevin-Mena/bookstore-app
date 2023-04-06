@@ -5,9 +5,8 @@ import BookList from '../../components/BookList/booklist';
 const Home = () => (
   <>
     <div>
-      <p>ADD NEW BOOK</p>
-      <AddBook />
       <BookList />
+      <AddBook />
     </div>
   </>
 );
