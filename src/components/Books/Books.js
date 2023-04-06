@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { CircularProgressbar } from "react-circular-progressbar";
-import { deleteBook } from "../../features/books/booksSlice";
-import "react-circular-progressbar/dist/styles.css";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import { deleteBook } from '../../features/books/booksSlice';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Books = ({ id, title, author }) => {
   const [lessonProgress, setlessonProgress] = useState(64);
