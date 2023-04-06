@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../features/books/booksSlice';
+import { deleteBook } from '../../features/books/booksSlice';
 
 const Books = ({ id, title, author }) => {
   const dispatch = useDispatch();
+
+  const deleteHandler = () => {
+    dispatch(deleteBook(id));
+  };
+
   Books.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -23,14 +28,11 @@ const Books = ({ id, title, author }) => {
           Author:
           {author}
         </li>
-
-        <button
-          type="button"
-          className="remove"
-          onClick={() => dispatch(removeBook(id))}
-        >
+        <button type="button">Comment</button>
+        <button type="button" className="remove" onClick={deleteHandler}>
           Remove
         </button>
+        <button type="button">Edit</button>
       </ul>
     </div>
   );
