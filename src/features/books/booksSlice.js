@@ -26,8 +26,7 @@ export const fetchBooks = createAsyncThunk(
 
 export const createBook = createAsyncThunk('books/createBook', async (book) => {
   try {
-    const response = await axios.post(API_URL, book);
-    console.log(response);
+    await axios.post(API_URL, book);
     return book;
   } catch (error) {
     return error;
