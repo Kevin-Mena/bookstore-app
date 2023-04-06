@@ -34,6 +34,7 @@ const AddBook = () => {
       <input
         type="text"
         name="author"
+        className="author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         placeholder="Book author"

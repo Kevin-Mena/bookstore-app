@@ -33,6 +33,11 @@ body {
     background:rgba(0, 0, 0, 0.05);
     padding: 2rem;
 }
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 /* {* NAVBAR STYLES *} */
 
 .navbar {
@@ -110,13 +115,12 @@ body {
 }
 
 /* FORM */
-form {
+/* form {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 86.333%;
     margin: 0 auto;
-}
+} */
 .form-title {
     width: 10.875rem;
         height: 1.5rem;
@@ -157,6 +161,16 @@ form {
 }
 input {
     width: 41.5rem;
+        height: 2.813rem;
+        margin: 1.188rem 2.125rem 0 0;
+        padding: 0.813rem 30.688rem 0.813rem 1.063rem;
+        border-radius: 4px;
+        border: solid 1px #e8e8e8;
+        background-color: var(--primary-white-2);
+        
+}
+.author {
+    width: 20rem;
         height: 2.813rem;
         margin: 1.188rem 2.125rem 0 0;
         padding: 0.813rem 30.688rem 0.813rem 1.063rem;

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { deleteBook } from "../../features/books/booksSlice";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { deleteBook } from '../../features/books/booksSlice';
 
 const Books = ({ id, title, author }) => {
   const dispatch = useDispatch();
@@ -38,10 +38,17 @@ const Books = ({ id, title, author }) => {
             </button>
           </div>
         </div>
-        <div className="progress"></div>
+        <div className="progress">
+          <p>64%</p>
+          <p>Completed</p>
+        </div>
       </div>
       <div className="chapters">
-        <h1>bla</h1>
+        <p>CURRENT CHAPTER</p>
+        <p>Chapter 17</p>
+        <button type="button" className="btn-progress">
+          UPDATE PROGRESS
+        </button>
       </div>
     </div>
   );
