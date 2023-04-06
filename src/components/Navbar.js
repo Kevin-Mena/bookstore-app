@@ -1,18 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css';
 
 const Navbar = () => (
   <>
     <nav className="navbar">
-      <div className="header">
+      <div className="logo">
         <h1>Bookstore CMS</h1>
       </div>
       <div className="nav">
-        <NavLink to="/" className="navlink">
+        <NavLink to="/" className="navlink-books">
           BOOKS
         </NavLink>
-        <NavLink to="/categories" className="navlink">
+        <NavLink to="/categories" className="navlink-categories">
           CATEGORIES
         </NavLink>
         <NavLink to="/account" className="account">

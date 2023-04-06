@@ -23,7 +23,7 @@ const AddBook = () => {
 
   return (
     <form onSubmit={submitHandler}>
-      <p>ADD NEW BOOK</p>
+      <p className="form-title">ADD NEW BOOK</p>
       <input
         type="text"
         name="title"
@@ -38,8 +38,8 @@ const AddBook = () => {
         onChange={(e) => setAuthor(e.target.value)}
         placeholder="Book author"
       />
-      <button type="submit" className="btn-submit">
-        Add Book
+      <button type="submit" className="btn-submit" id="btn-add">
+        <p className="btn-info">ADD BOOK</p>
       </button>
     </form>
   );

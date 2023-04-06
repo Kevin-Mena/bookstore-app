@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { deleteBook } from '../../features/books/booksSlice';
+import React from "react";
+import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { deleteBook } from "../../features/books/booksSlice";
 
 const Books = ({ id, title, author }) => {
   const dispatch = useDispatch();
@@ -18,22 +18,31 @@ const Books = ({ id, title, author }) => {
 
   return (
     <div>
-      <ul>
-        <li>
-          Title:
-          {title}
-        </li>
-
-        <li>
-          Author:
-          {author}
-        </li>
-        <button type="button">Comment</button>
-        <button type="button" className="remove" onClick={deleteHandler}>
-          Remove
-        </button>
-        <button type="button">Edit</button>
-      </ul>
+      <div className="book-container">
+        <div className="details">
+          <li className="book-title">{title}</li>
+          <li className="book-author">{author}</li>
+          <div className="btn-group">
+            <button type="button" className="btn-comment">
+              Comment
+            </button>
+            <button
+              type="button"
+              className="btn-remove"
+              onClick={deleteHandler}
+            >
+              Remove
+            </button>
+            <button type="button" className="btn-edit">
+              Edit
+            </button>
+          </div>
+        </div>
+        <div className="progress"></div>
+      </div>
+      <div className="chapters">
+        <h1>bla</h1>
+      </div>
     </div>
   );
 };
