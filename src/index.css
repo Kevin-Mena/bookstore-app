@@ -67,6 +67,7 @@ html {
   text-decoration: none;
   margin-left: 3rem;
 }
+
 .dev-status {
   width: auto;
   height: 1rem;
@@ -97,6 +98,7 @@ html {
   color: var(--primary-black);
   text-decoration: none;
 }
+
 .back-home {
   width: auto;
   height: 1rem;
@@ -108,9 +110,9 @@ html {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: var(--clr-blueMedium2-3);
+  color: var(--primary-blue);
   text-decoration: none;
-  white-space: none;
+  white-space: nowrap;
 }
 
 .nav {
@@ -221,7 +223,8 @@ input {
 }
 
 /* BOOK DETAILS */
-.book-container,.main {
+.book-container,
+.main {
   display: flex;
   justify-content: space-between;
   align-items: center;

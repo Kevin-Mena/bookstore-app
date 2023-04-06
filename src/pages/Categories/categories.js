@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import "./categories.css";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import './categories.css';
+import { useState } from 'react';
 
 const Categories = () => {
   const [checkStatus, setcheckStatus] = useState(false);
