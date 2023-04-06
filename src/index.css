@@ -67,8 +67,23 @@ html {
   text-decoration: none;
   margin-left: 3rem;
 }
+.dev-status {
+  width: auto;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-size: 1.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--primary-black);
+  text-decoration: none;
+  margin-left: 3rem;
+}
 
-.navlink-categories {
+.navlink-categories,
+.back-home {
   width: 3.688rem;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
@@ -81,6 +96,21 @@ html {
   letter-spacing: 1.9px;
   color: var(--primary-black);
   text-decoration: none;
+}
+.back-home {
+  width: auto;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-size: 0.813rem;
+  opacity: 0.8;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--clr-blueMedium2-3);
+  text-decoration: none;
+  white-space: none;
 }
 
 .nav {
@@ -191,7 +221,7 @@ input {
 }
 
 /* BOOK DETAILS */
-.book-container {
+.book-container,.main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,7 +298,8 @@ input {
   opacity: 0.8;
 }
 
-.btn-progress {
+.btn-progress,
+.btn-status {
   width: 11.5rem;
   height: 2.063rem;
   margin: 0.75rem 0 0.563rem 3.688rem;
