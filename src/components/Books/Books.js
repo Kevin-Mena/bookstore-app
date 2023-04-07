@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import { deleteBook } from '../../features/books/booksSlice';
-import 'react-circular-progressbar/dist/styles.css';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { CircularProgressbar } from "react-circular-progressbar";
+import { deleteBook } from "../../features/books/booksSlice";
+import "react-circular-progressbar/dist/styles.css";
 
 const Books = ({ id, title, author }) => {
   const [lessonProgress, setlessonProgress] = useState(64);
-  const [IsUpdate, setIsUpdate] = useState(false);
 
-  useEffect(() => {
-    if (lessonProgress < 100 && IsUpdate) {
-      setlessonProgress((prev) => prev + 2);
-      setlessonProgress((prev) => {
-        const updatedValue = prev + 2;
-        return updatedValue;
-      });
+  const updateProgress = () => {
+    let currentLesson = lessonProgress;
+    if (lessonProgress < 100) {
+      setlessonProgress((currentLesson += 2));
     }
-  }, [lessonProgress, IsUpdate]);
+  };
 
   const dispatch = useDispatch();
   const deleteHandler = () => {
@@ -38,7 +34,7 @@ const Books = ({ id, title, author }) => {
           <li className="book-author">{author}</li>
           <div className="btn-group">
             <button type="button" className="btn-comment">
-              Comment
+              Comments
             </button>
             <button
               type="button"
@@ -67,7 +63,7 @@ const Books = ({ id, title, author }) => {
           <button
             type="button"
             className="btn-progress"
-            onClick={() => setIsUpdate(true)}
+            onClick={updateProgress}
           >
             <p className="btn-text">UPDATE PROGRESS</p>
           </button>
