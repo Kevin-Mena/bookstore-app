@@ -1,6 +1,6 @@
 /* PRIMARY GLOBAL FONT */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 /* SECONDARY GLOBAL FONT */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&display=swap');
@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', arial;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -132,25 +132,23 @@ html {
 }
 
 .logo {
- 
-      width:13rem;
-      height: 2.313rem;
-      margin: 0.375rem 2.938rem 0.125rem 0;
-      white-space: nowrap;
-      font-size: 20px;
-      letter-spacing: normal;
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      line-height: normal;
-      font-stretch: normal;
-      font-style: normal;
-      font-variant-caps: normal;
-      font-variant-east-asian: normal;
-      font-variant-ligatures: normal;
-      font-variant-numeric: normal;
-      color: var(--primary-blue);
-  
-    }
+  width: 13rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  white-space: nowrap;
+  font-size: 20px;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  line-height: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  color: var(--primary-blue);
+}
 
 /* FORM */
 .form {
