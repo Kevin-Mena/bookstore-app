@@ -160,16 +160,15 @@ html {
   margin: 1.188rem 2.125rem 0 58px;
   margin: 0 auto; */
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75rem;
-    height: 10.625rem;
-    margin: -0.687rem -0.75rem -1px;
-    padding: 2rem 9.188rem 1.625rem 1.688rem;
-    border-radius: 4px;
-    
-
+  justify-content: space-between;
+  align-items: center;
+  width: 75rem;
+  height: 10.625rem;
+  margin: -0.687rem -0.75rem -1px;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
 }
+
 .title {
   width: 41.5rem;
   height: 2.813rem;
@@ -188,7 +187,7 @@ html {
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: var(--primary-white-2);
-} 
+}
 
 .form-title {
   width: 18.875rem;
@@ -202,8 +201,6 @@ html {
   padding-left: 0.513rem;
   letter-spacing: -0.18px;
   color: var(--primary-gray);
-
-  
 }
 
 #btn-add {
@@ -440,4 +437,3 @@ input {
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
   stroke: transparent;
 }
-
